@@ -53,7 +53,7 @@ York University January 2012 – April 2016
 
 ## OPEN SOURCE CONTRIBUTIONS
 
-**[Kotlin](https://github.com/JetBrains/kotlin)** </br>
+**[Kotlin](https://github.com/JetBrains/kotlin)**  
 Implemented code folding for Kotlin standard library collection factory methods for the IntelliJ IDEA and Android
 Studio IDEs.
 
