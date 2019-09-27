@@ -4,7 +4,6 @@ title: Resume
 permalink: /resume/
 ---
 
-- 5 + years hands-on experience building Web backend applications and Android mobile applications.
 - Skilled in object-oriented software design; having applied various design patterns in production systems.
 - Built production grade authentication and authorization systems implementing OAuth, OpenID and SAML.
 - Built RESTful web backend services backed by Postgres, Redis, RabbitMQ, Ehcache using Spring Boot.
