@@ -4,12 +4,6 @@ title: Resume
 permalink: /resume/
 ---
 
-# Aaron Nwabuoku
-
-93 Marion St, Toronto, Ontario M6R 1E6 • (647) 770- 4145 **•** aaronnwabuoku@yahoo.com
-https://github.com/aerovulpe
-**SUMMARY**
-
 - 5 + years hands-on experience building Web backend applications and Android mobile applications.
 - Skilled in object-oriented software design; having applied various design patterns in production systems.
 - Built production grade authentication and authorization systems implementing OAuth, OpenID and SAML.
@@ -21,16 +15,6 @@ https://github.com/aerovulpe
 
 ## WORK EXPERIENCE
 
-**Software Developer,** Vena Solutions. June 2 016 – Present
-
-- Built an OAuth 2.0 authorization server for our internal customer monitoring service utilizing Spring.
-- Implemented an Excel Formula compiler targeting the JVM to deliver a highly performant, powerful, but
-    familiar data transformation tool for our customers.
-- Built a Kubernetes based microservice framework to enable feature developers to easily create and deploy
-    services from our chassis, handling boilerplate logic, inter-service communication and deployment concerns.
-- Architected and implemented a Spring Boot microservice to gather business critical insights from customer
-    Excel spreadsheets, deployed on Kubernetes, using the framework I built.
-
 **CTO (Co-founder),** Herzberg Labs. March 2017 – Present
 
 - Designed, architected and built Howdi, a clustered geospatial social network deployed on the AWS cloud
@@ -39,6 +23,16 @@ https://github.com/aerovulpe
     logins (through Facebook and Google accounts).
 - Utilized the full scope of the Spring Cloud project and AWS to implement advanced features using Natural
     Language Processing, Push Notifications, WebSocket live refresh (and messaging), etc.
+
+**Software Developer,** Vena Solutions. June 2016 – June 2019
+
+- Built an OAuth 2.0 authorization server for our internal customer monitoring service utilizing Spring.
+- Implemented an Excel Formula compiler targeting the JVM to deliver a highly performant, powerful, but
+    familiar data transformation tool for our customers.
+- Built a Kubernetes based microservice framework to enable feature developers to easily create and deploy
+    services from our chassis, handling boilerplate logic, inter-service communication and deployment concerns.
+- Architected and implemented a Spring Boot microservice to gather business critical insights from customer
+    Excel spreadsheets, deployed on Kubernetes, using the framework I built.
 
 **Android Developer,** Vida Home Inc. July 2015 – November 2015
 
@@ -60,7 +54,7 @@ York University January 2012 – April 2016
 
 ## OPEN SOURCE CONTRIBUTIONS
 
-**Kotlin** https://github.com/JetBrains/kotlin
+**[Kotlin](https://github.com/JetBrains/kotlin)** </br>
 Implemented code folding for Kotlin standard library collection factory methods for the IntelliJ IDEA and Android
 Studio IDEs.
 

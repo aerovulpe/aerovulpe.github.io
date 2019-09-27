@@ -4,7 +4,7 @@ title:  "Securing your web application with Spring Boot and Kotlin."
 date:   2018-4-17 10:35:57 -0500
 categories: 
 ---
-#Securing your web application with Spring Boot and Kotlin.
+# Securing your web application with Spring Boot and Kotlin.
 
 So you’re building the next Uber for Cats - the internet is going to love it. But before you get your millions of users, the venture capital, and your boatload of cash, you need to handle a few things - like user login and how users can be sure their data is safe. Only a user and third-party applications granted access by your users should be able to access their private data. You might think about it a bit and decide to write your own custom security framework - but should you?
 
@@ -12,7 +12,7 @@ User authentication and authorization is a hard problem to solve from scratch an
 
 Furthermore, in a world of multiple web services, users often expect the ability to share their data across multiple applications: using a standard protocol supported across the web ecosystems means integrating with your system is easy and predictable - ideally as easy as plugging your application's specific configuration values to a library like [Scribe](https://github.com/scribejava/scribejava) or [AppAuth](https://appauth.io/).
 
-##O what?
+## O what?
 OAuth is an authorization open standard allowing users to sign into multiple services with well defined resource access scopes without sharing passwords. OAuth works through delegation to a trusted authorization provider. It allows users to grant third parties (like other users or web applications) access to their information without the sharing of passwords, separating the concept of a user, and user access, by delegating to an authorization server. Since there's no need to share passwords with external agents and with authorization decoupled from passwords, users can change their passwords without breaking user sign-in sessions. With widespread use across the industry including Google, Facebook, Microsoft, Amazon, and Vena - there are many libraries across multiple languages for handling OAuth authorization.
 
 There are four basic roles in OAuth V2, the latest version of OAuth, and the version we’ll be building our authorization server with:
@@ -29,7 +29,7 @@ Now with all that information out of the way, let’s get started on our server!
 
 We’ll use the Spring Boot web framework built on top Spring for our authorization server. Its convention over configuration philosophy and excellent support for the OAuth V2 protocol means you can pretty much have your own authorization server up and running by the end of this blog post. Our sample server will be written in Kotlin using Gradle as the build system. Spring is written primarily in Java but has excellent support for Kotlin. In fact, the latest iteration of Spring, Spring 5, supports Kotlin as a first class citizen of the framework.
 
-##Defining the project and dependencies
+## Defining the project and dependencies
 To get started, we’ll need to add the Gradle dependencies we need for Spring Boot and Kotlin and modify our buildpath.
 
 ```
@@ -71,7 +71,7 @@ apply plugin: "kotlin-spring"
 apply plugin: "org.springframework.boot"  
 ```
 
-##Adding our user definition and logic
+## Adding our user definition and logic
 We’ll need a data class representing a user account, so let’s create that now.
 
 ```
@@ -149,7 +149,7 @@ class AccountServiceImpl(private val oAuthAccountDetailWriterFactory: OAuthAccou
 
 Now that we have the user logic implemented, let’s look to configuring our Spring Boot application as an authorization server!
 
-##Configuring the authorization server
+## Configuring the authorization server
 We'll have to apply the `@EnableAuthorizationServer` annotation to our application. This tells Spring Boot to enable its OAuth 2.0 Authorization Server mechanism.
 
 ```
@@ -240,7 +240,7 @@ class WebSecurityConfiguration(private val oauth2ClientContext: OAuth2ClientCont
 
 Since we're extending `WebSecurityConfigurerAdapter`, let's use this chance to register our `AccountService` instance as a `UserDetailsService` to load our user data into the Spring context. We shouldn't store passwords in plain text, for a whole bunch of reasons, so we'll also set a `PasswordEncoder` for Spring to use to check hashed passwords when users sign in via their passwords.
 
-##Using the authorization server
+## Using the authorization server
 OAuth V2 defines a few different authorization flows. To test our authorization server, we'll be using the authorization code flow. This three-legged flow works best for web apps running on a backend server, capable of hiding secrets. This is considered the safest choice as both the user and your application prove themselves to the authorization server, unlike the implicit flow where it is [possible for an attacker to steal tokens](https://medium.com/@justinsecurity/mobile-apps-and-oauths-implicit-flow-68e72c6515a1) without having to compromise your network.
 
 To begin the authorization `code` flow, let's first redirect the user to our login page with the OAuth authorize endpoint, passing in our client application's id and using the code grant: if you're running the sample application, its url looks like this http://localhost:8080/oauth/authorize?response_type=code&client_id=client_app_id&redirect_uri=http://example.com
