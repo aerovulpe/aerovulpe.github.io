@@ -4,7 +4,6 @@ title:  "Securing your web application with Spring Boot and Kotlin."
 date:   2018-4-17 10:35:57 -0500
 categories: 
 ---
-# Securing your web application with Spring Boot and Kotlin.
 
 So you’re building the next Uber for Cats - the internet is going to love it. But before you get your millions of users, the venture capital, and your boatload of cash, you need to handle a few things - like user login and how users can be sure their data is safe. Only a user and third-party applications granted access by your users should be able to access their private data. You might think about it a bit and decide to write your own custom security framework - but should you?
 
